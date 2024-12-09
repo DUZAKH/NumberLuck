@@ -326,6 +326,10 @@ function displayAchievementsScreen() {
 }
 
 function mousePressed() {
+    // Plays music if it's not already playing and loops it
+    if (music && !music.isPlaying()) {
+        music.loop();
+    }
     // checks to see if the game is on start, which it is at the beginning 
     if (gameState === "start") {
         //Changes the state to play when the mouse is pressed
