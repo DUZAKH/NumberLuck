@@ -12,6 +12,6 @@ Chopsticks In rice and fish, China.
 Horseshoe, North America.
 Clover and mirror, Western Europe.
 
-[Play it!](https://duzakh.github.io/cart253-examples/topics/making/frogfrogfrog/index.html)
+[Play it!](https://duzakh.github.io/NumberLuck)
 
 Music by <a href="https://pixabay.com/users/harumachimusic-13470593/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=259286">Noru</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=259286">Pixabay</a>
