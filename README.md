@@ -1,4 +1,4 @@
-# 9Luck
+# NumberLuck
 
 mini project about black cats, numbers and lucky and unlucky omens...
 
