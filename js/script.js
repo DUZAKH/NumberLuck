@@ -15,6 +15,7 @@
  * - If you catch unlucky items, you will lose your 9 lucky hearts once you reach 20 you win!
  * - Click on numbers to see what random rewards will be given to you throughout your play
  * - act quickly and see how long you last!
+ */
 
 
 //black cat is created in three seperate parts
