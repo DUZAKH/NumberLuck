@@ -1,14 +1,21 @@
 /**
  * numberLuck!
  * Kiana Rezaee
+ * You are a being rules by things beyond your understanding, for me math is one of them 
+ * We constantly depend on numbers to define us. Our age, data and more but there are also more superstious uses
+ * Humans love to try and guess using numbers. Bidding, coin flips, dice, and such. 
+ * But does true randomness exist? 
+ * In the case of even coin flips... it seems not
+ * But js promises randomness! use RandomLuck to find out what you can achieve based on luck and numbers alone...
+ * Does the award align with you?
+ * 
  * Instructions:
- * - See how many achievements you can reach!
- * - Test your luck! Click on any number from 0-9 to see what awaits you...
- * - Each number will bring about a different occurrence.
+ * - Black Cat will be following your mouse
+ * - Catch lucky items to survive longer 
+ * - If you catch unlucky items, you will lose your 9 lucky hearts once you reach 20 you win!
+ * - Click on numbers to see what random rewards will be given to you throughout your play
+ * - act quickly and see how long you last!
  *
- * Made with p5
- * https://p5js.org/
- */
 
 //black cat is created in three seperate parts
 let BlackCat = {
@@ -105,10 +112,10 @@ function preload() {
     pixelFont = loadFont("https://duzakh.github.io/cart253/mod-jam/assets/Jacquard_24/Jacquard24-Regular.ttf");
 }
 
-//green background
+//Lilac background
 function setup() {
     createCanvas(640, 480);
-    background("#AEF359");
+    background("#b3b3ff");
 }
 
 function displayStartScreen() {
@@ -186,6 +193,9 @@ function moveSymbol() {
     });
 }
 
+// i try to use this function to create random achievements when pressing a number 0-9
+//each represents a philosophical thought
+//does not function properly, the achievements are meant to all display at the end together, instead they display as soon as you press
 function keyPressed() {
     if (gameState === "game" && keyCode >= 48 && keyCode <= 57) {
         let randomEffect = floor(random(1, 8));
@@ -221,7 +231,7 @@ function keyPressed() {
                 items.forEach(item => item.image = undefined);
                 break;
         }
-        
+        //does not function i think
         if (ace.counter === 20) {
             gameState = "achievements";
         }
@@ -315,7 +325,7 @@ function resetSymbol() {
 })}
 
 function displayAchievementsScreen() {
-    background(200);
+    background("#b3b3ff");
     textFont(pixelFont);
     textSize(24);
     fill(0);
