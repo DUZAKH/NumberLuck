@@ -113,7 +113,7 @@ function preload() {
     pixelFont = loadFont("https://duzakh.github.io/cart253/mod-jam/assets/Jacquard_24/Jacquard24-Regular.ttf");
 }
 
-//Lilac background
+//background
 function setup() {
     createCanvas(640, 480);
     background("#b3b3ff");
@@ -144,7 +144,7 @@ function displayStartScreen() {
 
 function draw() {
     //background in every frame
-    background("#AEF359");
+    background("#b3b3ff");
     //if the game state is start
     if (gameState === "start") {
     //displays the start screen
@@ -165,10 +165,12 @@ function draw() {
     //increase the timer counter in each frame    
         timer.counter++;
     //move all the items
+    //issue here is they all move together meaning they reappear together too
         items.forEach(moveSymbol);
     //draw all the items
         items.forEach(drawSymbol);
     //check collisions for all the items
+    //issue here as it does not function properly, all of them disappear together
         items.forEach(checkCollision);
     //the final gamestate which displays the achievements 
     } else if (gameState === "achievements") {
@@ -196,7 +198,8 @@ function moveSymbol() {
 
 // i try to use this function to create random achievements when pressing a number 0-9
 //each represents a philosophical thought
-//does not function properly, the achievements are meant to all display at the end together, instead they display as soon as you press
+//currently not funcitioning at all
+//when it works it still not function properly, the achievements are meant to all display at the end together, instead they display as soon as you press
 function keyPressed() {
     if (gameState === "game" && keyCode >= 48 && keyCode <= 57) {
         let randomEffect = floor(random(1, 8));
@@ -204,6 +207,7 @@ function keyPressed() {
             case 1:
                 // The black cat disappears."
                 achievements.push("Schrödinger's Cat");
+                //supposed to push so they all appear, does not help
                 BlackCat.body.image = undefined;
                 break;
             case 2: 
@@ -232,7 +236,8 @@ function keyPressed() {
                 items.forEach(item => item.image = undefined);
                 break;
         }
-        //does not function i think
+        //does not function i think?
+        //NAN appears sometimes 
         if (ace.counter === 20) {
             gameState = "achievements";
         }
